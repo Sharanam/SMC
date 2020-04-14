@@ -1,0 +1,23 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Shivam.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div runat="server">
+        <form runat="server">
+        <p align="right">Your Maximum Score is : <%=Session["MaxScore"] %><br />Your Current Score is : <%=Session["CurrentScore"] %></p>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+    </div>
+        <div style="background-color:burlywood;">
+            <asp:Button ID="btnLogOut" runat="server" Text="Log Out" BorderColor="Red" BorderStyle="Outset" OnClick="btnLogOut_Click"/>
+        </form>
+        </div>
+
+</body>
+</html>
