@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+<title>Index6</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+    scroll-behavior: smooth;
+}
+
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("assets/img/mac.jpg");
+  min-height: 100%;
+}
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+</style>
+<body>
+    <section>
+        <div id="StudentSignUp" class="w3-modal">
+            <div class="w3-modal-content w3-card-4 w3-animate-zoom">
+                    <header class="w3-container w3-blue"> 
+                        <span onclick="document.getElementById('StudentSignUp').style.display='none'" class="w3-button w3-blue w3-xlarge w3-display-topright">
+                            <i class="fa fa-window-close" aria-hidden="true"></i>
+                        </span>
+                        <h2>Sign Up</h2>
+                    </header>
+                    <div class="w3-bar w3-border-bottom">
+                        <button class="tablink w3-bar-item w3-button" onclick="openFormHead(event, 'Student')">Student</button>
+                        <button class="tablink w3-bar-item w3-button" onclick="openFormHead(event, 'Teacher')">Teacher</button>
+                    </div>
+                    <div id="Student" class="FormHead">
+                        <form class="w3-container" action=".">
+                            <div class="w3-section">
+                                <h2>Sign Up As Student</h2>
+                                <label><b>Full Name</b></label>
+                                <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter full name." name="fullname" required>
+                                <label><b>Email ID</b></label>
+                                <input class="w3-input w3-border" type="email" placeholder="Enter Email ID" name="email" required>
+                                <label><b>Password</b></label>
+                                <input class="w3-input w3-border" type="password" placeholder="Enter Password" name="pswd" required>
+                                <label><b>Password</b></label>
+                                <input class="w3-input w3-border" type="password" placeholder="Re-enter Password" name="confirmPswd" required>
+                                <button class="w3-button w3-block w3-green w3-section w3-padding" type="submit">Proceed</button>
+                            </div>
+                        </form>
+                        <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
+                            <button onclick="document.getElementById('StudentSignUp').style.display='none'" type="button" class="w3-button w3-red">Cancel</button>
+                            <span class="w3-right w3-padding w3-hide-small">Already user? <a href="#">Login</a></span>
+                        </div><!--End-->
+                    </div>
+                    <div id="Teacher" class="FormHead">
+                        <form class="w3-container" action=".">
+                            <div class="w3-section">
+                                <h2>Sign Up As Teacher</h2>
+                                  <label><b>Full Name</b></label>
+                                  <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter full name." name="fullname" required>
+                                  <label><b>Email ID</b></label>
+                                  <input class="w3-input w3-border" type="email" placeholder="Enter Email ID" name="email" required>
+                                  <label><b>Password</b></label>
+                                  <input class="w3-input w3-border" type="password" placeholder="Enter Password" name="pswd" required>
+                                  <label><b>Password</b></label>
+                                  <input class="w3-input w3-border" type="password" placeholder="Re-enter Password" name="confirmPswd" required>
+                                  <button class="w3-button w3-block w3-green w3-section w3-padding" type="submit">Proceed</button>
+                            </div>
+                        </form>
+                        <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
+                            <button onclick="document.getElementById('StudentSignUp').style.display='none'" type="button" class="w3-button w3-red">Cancel</button>
+                            <span class="w3-right w3-padding w3-hide-small">Already user? <a href="#">Login</a></span>
+                        </div><!--End-->
+                    </div>
+                </div>
+        </div>
+        <script>
+            document.getElementsByClassName("tablink")[0].click();
+            function openFormHead(evt, FormHeadName) {
+                var i, x, tablinks; 
+                x = document.getElementsByClassName("FormHead");
+                for (i = 0; i < x.length; i++) {x[i].style.display = "none";}
+                  tablinks = document.getElementsByClassName("tablink");
+                  for (i = 0; i < x.length; i++) {tablinks[i].classList.remove("w3-light-grey");}
+                  document.getElementById(FormHeadName).style.display = "block";
+                  evt.currentTarget.classList.add("w3-light-grey");
+            }
+        </script>
+    </section>
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="#home" class="w3-bar-item w3-button w3-wide">Ureka</a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+        <a href="#AboutProject" class="w3-bar-item w3-button"><i class="fa fa-tag"></i> About Project</a>
+        <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> PRICING</a>
+        <a href="#Team" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> Team</a>
+        <a href="#contactusredirection" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> Contact Us</a>
+        <a href="#" class="w3-bar-item w3-button"><i class="fa fa-flag"></i> Log In</a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16"><i class="fa fa-close"></i> </a>
+  <a href="#AboutProject" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa fa-user"></i> About Project</a>
+    <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> PRICING</a>
+    <a href="#Team" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> Team</a>
+  <a href="#contactusredirection" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> Contact Us</a>
+  <a href="#" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa fa-flag"></i> Log In</a>
+</nav>
+
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-left w3-text-white" style="padding:48px">
+    <span class="w3-jumbo w3-hide-small">Quality Education. Quality Life.</span><br>
+    <span class="w3-xxlarge w3-hide-large w3-hide-medium">Quality Education. Quality Life.</span><br>
+    <span class="w3-large">Online Courses For Every Field. <br> What Are You Waiting For?</span>
+      <p><button onclick="document.getElementById('StudentSignUp').style.display='block'" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Want to Join?</button></p>
+  </div> 
+  <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
+      <a href="facebook.com"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+      <a href="instagram.com"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+      <a href="instagram.com"><i class="fa fa-snapchat w3-hover-opacity"></i></a>
+      <a href="instagram.com"><i class="fa fa-pinterest w3-hover-opacity"></i></a>
+      <a href="instagram.com"><i class="fa fa-twitter w3-hover-opacity"></i></a>
+      <a href="instagram.com"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+  </div>
+</header>
+
+<!-- About Section -->
+<div class="w3-container" style="margin:10% 0;" id="AboutProject">
+  <h2 class="w3-center w3-wide">UNIQUENESS</h2>
+  <p class="w3-center w3-large w3-text-grey">Key features of our platform</p>
+  <div class="w3-row-padding w3-center" style="margin-top:64px">
+    <div class="w3-quarter">
+        <div style="max-width: 100%; height: 10rem; display: flex; justify-content: center;">
+          <img src="../New%20folder/OLMS%20UI%20ASSETS/Why%20Are%20We%20Different/qualityTeachers.svg" style="max-width: 100%; min-height: 10rem;" alt="Image">
+        </div>
+      <p class="w3-large" style="font-weight: bold;">Quality teachers</p>
+      <p class="w3-text-grey">Certified teachers will teach you the best they can.</p>
+    </div>
+    <div class="w3-quarter">
+        <div style="max-width: 100%; height: 10rem; display: flex; justify-content: center;">
+          <img src="../New%20folder/OLMS%20UI%20ASSETS/Why%20Are%20We%20Different/learnAtYourPace.png" style="max-width: 75%; min-height: 10rem;" alt="Image">
+        </div>
+      <p class="w3-large" style="font-weight: bold;">Learn at your place</p>
+      <p class="w3-text-grey">As there is no time limit to learn the courses you opt.</p>
+    </div>
+    <div class="w3-quarter">
+        <div style="max-width: 100%; height: 10rem; display: flex; justify-content: center;">
+          <img src="../New%20folder/OLMS%20UI%20ASSETS/Why%20Are%20We%20Different/getRewardPoints.svg"
+               style="max-width: 100%; min-height: 10rem;" alt="Image">
+        </div>
+      <p class="w3-large" style="font-weight: bold;">Get reward point</p>
+      <p class="w3-text-grey">Simply by playing with other players online & use them to get stuffs from our shop.</p>
+    </div>
+    <div class="w3-quarter">
+        <div style="max-width: 100%; height: 10rem; display: flex; justify-content: center;">
+          <img src="../New%20folder/OLMS%20UI%20ASSETS/Why%20Are%20We%20Different/doSavings.svg"
+               style="max-width: 100%; min-height: 10rem;" alt="Image">
+        </div>
+      <p class="w3-large" style="font-weight: bold;">Savings</p>
+      <p class="w3-text-grey">by learning the same college course but now at affordable rates.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Work Section -->
+    <div class="w3-container" style="padding:128px 16px" id="work">
+        <img src="../New folder/OLMS UI ASSETS/Our Courses/gradHat.svg" class="graduationHat" style="display: block; margin-left: auto; margin-right: auto; width: 25%;" alt="">
+        <h3 class="w3-center w3-wide">OUR WORK</h3>
+        <p class="w3-center w3-large">What we've done for people</p>
+        <div class="w3-row-padding  w3-grayscale" style="margin-top:64px;text-align: center;">
+            <div class="w3-col l3 m6">
+                <h3>Business</h3>
+                <img src="../New folder/OLMS UI ASSETS/Our Courses/business.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+               alt="Basics of Business. Create a good base. Invest Good & Earn Good">
+                <p>Basics of Business. Create a good base. Invest Good & Earn Good</p>
+            </div>
+            <div class="w3-col l3 m6">
+                <h3>Marketing</h3>
+                <img src="../New folder/OLMS UI ASSETS/Our Courses/marketing.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                     alt="Help the Business grow with your marketing mindset. It goes Boom.">
+                <p>Help the Business grow with your marketing mindset. It goes Boom.</p>
+            </div>
+            <div class="w3-col l3 m6">
+                <h3>Programming</h3>
+                <img src="../New folder/OLMS UI ASSETS/Our Courses/programming.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                     alt="For Geeks for Sure. Get your grip on latest coding langs. Advance yourself.">
+                <p>For Geeks for Sure. Get your grip on latest coding langs. Advance yourself.</p>
+            </div>
+            <div class="w3-col l3 m6">
+                <h3>Designing</h3>
+                <img src="../New folder/OLMS UI ASSETS/Our Courses/designing.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                     alt="Be Creative Kind. Draw the Spirit Inside You. Design the Art.">
+                <p>Be Creative Kind. Draw the Spirit Inside You. Design the Art.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pricing Section -->
+<div class="w3-container w3-center w3-dark-grey" style="padding:128px 16px" id="pricing">
+  <h3>Pricing</h3>
+  <p class="w3-large">Choose a pricing plan that fits your needs.</p>
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-third w3-section">
+      <ul class="w3-ul w3-white w3-hover-shadow">
+        <li class="w3-black w3-xlarge w3-padding-32">Starter</li>
+          <li class="w3-padding-16">
+            <h2 class="w3-wide">FREE</h2>
+          </li>
+          <li class="w3-padding-16">First 3 months <b>FREE</b> User Experience.</li>
+          <li class="w3-padding-16">Pay for the Premium <b>after 3 months</b>.</li>
+          <li class="w3-padding-16">Play games and <b>earn point</b>.</li>
+          <li class="w3-padding-16">No one teaches free, <b>but we</b>.</li>
+        <li class="w3-light-grey w3-padding-24">
+          <button class="w3-button w3-black w3-padding-large">Select</button>
+        </li>
+      </ul>
+    </div>
+    <div class="w3-third">
+      <ul class="w3-ul w3-white w3-hover-shadow">
+        <li class="w3-red w3-xlarge w3-padding-48">Superior</li>
+          
+        <li class="w3-padding-16">
+          <h2 class="w3-wide">$ 2000</h2>
+          <span class="w3-opacity">per year</span>
+        </li>
+          <li class="w3-padding-16"><b>Save 400 USD</b> on this Premium Plan.</li>
+        <li class="w3-padding-16"><b>Long term</b> Premium Plan for Users.</li>
+          <li class="w3-padding-16"><b>Learn anytime, anything</b> with special features.</li>
+          <li class="w3-padding-16">Prepare for worst, <b>Plan for best.</b></li>
+        <li class="w3-light-grey w3-padding-24">
+          <button class="w3-button w3-black w3-padding-large">Select</button>
+        </li>
+      </ul>
+    </div>
+    <div class="w3-third w3-section">
+      <ul class="w3-ul w3-white w3-hover-shadow">
+        <li class="w3-black w3-xlarge w3-padding-32">Premium</li>
+        <li class="w3-padding-16">
+          <h2 class="w3-wide">$ 200</h2>
+          <span class="w3-opacity">per month</span>
+        </li>
+        <li class="w3-padding-16"><b>Short term</b> Premium Plan for Users.</li>
+          <li class="w3-padding-16"><b>Download Content</b> Access.</li>
+          <li class="w3-padding-16"><b>Learn Fast,</b> move ahead.</li>
+          <li class="w3-padding-16"><b>Pehle istemaal kare</b>, fir 20vaas kare.</li>
+        
+        <li class="w3-light-grey w3-padding-24">
+          <button class="w3-button w3-black w3-padding-large">Select</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Team Section -->
+<div class="w3-container" style="padding:128px 16px" id="Team">
+  <h2 class="w3-center w3-wide">THE TEAM</h2>
+  <p class="w3-center w3-large">The ones who runs this company</p>
+  <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+          <img src="../New folder/OLMS UI ASSETS/Our Team/Golem.jpeg" alt="Parth" style="width:100%;">
+          <div class="w3-container">
+              <h3>Parth Vaswani</h3>
+              <p class="w3-opacity">Project Manager</p>
+              <p>Intelligent pal. He is backbone of project.</p>
+              <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+          </div>
+        </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="../New folder/OLMS UI ASSETS/Our Team/Zubex.jpeg" alt="Sharanam" style="width:100%">
+        <div class="w3-container">
+          <h3>Sharanam Chotai</h3>
+          <p class="w3-opacity">Technical writer</p>
+            <p>Responsive site maker, who let weird code in.</p>
+          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="../New folder/OLMS UI ASSETS/Our Team/GOD.jpg" alt="Shiv" style="width:100%">
+        <div class="w3-container">
+          <h3>Shiv Patel</h3>
+          <p class="w3-opacity">UI Designer</p>
+            <p>So called god of bca, known as ribbon cutter.</p>
+          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="../New folder/OLMS UI ASSETS/Our Team/Lockdown.jpeg" alt="Aryaman" style="width:100%">
+        <div class="w3-container">
+          <h3>Aryaman Karde</h3>
+          <p class="w3-opacity">Front end developer</p>
+          <p>Guy is racing against clock to find solution.</p>
+          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+<!--About Team SAPS-->
+    <div class="w3-container">
+        <div class="w3-panel w3-border w3-light-grey w3-round-large">
+            <h1>We, Team SAPS, </h1>
+            <p>are Under Graduate Students of BCA of Maharaja Sayajirao Gaekwad University aspiring to help those students who feel traditional education system boring and want a <b>Better &amp; Quality Replacement</b> of it.</p>
+        </div>
+    </div>
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+    
+<!-- Contact Section -->
+<div class="w3-container w3-light-grey" style="padding:128px 16px" id="contactusredirection">
+  <h3 class="w3-center">CONTACT</h3>
+  <p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
+  <div style="margin-top:48px; ">
+    <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Team Bachelors, BCA</p>
+    <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +91 97789965XX</p>
+    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: mail@SAPSmail.com</p>
+    <br>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+</footer>
+ 
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+</body>
+</html>
